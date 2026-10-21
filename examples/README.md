@@ -1,6 +1,6 @@
 # Examples
 
-Three small scripts that run the pieces without a phone, a VM or an account. Each is plain
+Four small scripts that run the pieces without a phone, a VM or an account. Each is plain
 Node (22.19 or newer), one file, no extra dependencies. Build once first:
 
 ```bash
@@ -12,6 +12,7 @@ pnpm install && pnpm build
 | [local-chat.mjs](local-chat.mjs) | A chat loop against a running agent over `POST /chat` | a running server (`pnpm instinct dev`) and a model key |
 | [fake-inkbox-webhook.mjs](fake-inkbox-webhook.mjs) | A signed `imessage.received` webhook, exactly as Inkbox would send it, and a tampered one that is refused | a running server started with `INKBOX_SIGNING_KEY` |
 | [dinner-a2a.mjs](dinner-a2a.mjs) | Two real agents planning a dinner over A2A with the model and the transport stubbed | nothing: no keys, no network |
+| [dream-demo.mjs](dream-demo.mjs) | Two nights of "dreaming" memory for a hair salon: facts, a correction, finished and cancelled work, a git commit per night. Output: [dream-sample/](dream-sample) | nothing; `ANTHROPIC_API_KEY` makes Claude do the dreaming |
 
 ## 1. Chat loop
 

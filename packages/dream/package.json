@@ -1,0 +1,20 @@
+{
+  "name": "@open-instinct/dream",
+  "version": "0.1.0",
+  "description": "Nightly 'dreaming' memory for Open Instinct: a background job reads the day's conversations and rewrites a git-tracked tree of markdown memory files",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": { "instinct-dream": "./dist/cli.js" },
+  "exports": { ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" } },
+  "files": ["dist", "README.md"],
+  "engines": { "node": ">=22.19.0" },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run --passWithNoTests",
+    "lint": "tsc -p tsconfig.json --noEmit"
+  },
+  "devDependencies": { "@types/node": "^22.15.0", "typescript": "^5.8.3", "vitest": "^3.2.4" }
+}
